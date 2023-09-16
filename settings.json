@@ -1,0 +1,35 @@
+{
+    "accounts": [
+        [
+            "\u8d26\u53f7\u6807\u8bc6\uff0c\u53ef\u4ee5\u8bbe\u7f6e\u4e3a\u7a7a\u5b57\u7b26\u4e32",
+            "\u8d26\u53f7\u4e3b\u9875\u94fe\u63a5",
+            "\u8d26\u53f7\u4e3b\u9875\u7c7b\u578b",
+            "\u4f5c\u54c1\u6700\u65e9\u53d1\u5e03\u65e5\u671f",
+            "\u4f5c\u54c1\u6700\u665a\u53d1\u5e03\u65e5\u671f"
+        ]
+    ],
+    "mix": [
+        [
+            "\u5408\u96c6\u6807\u8bc6\uff0c\u53ef\u4ee5\u8bbe\u7f6e\u4e3a\u7a7a\u5b57\u7b26\u4e32",
+            "\u5408\u96c6\u94fe\u63a5\u6216\u8005\u4f5c\u54c1\u94fe\u63a5"
+        ]
+    ],
+    "root": "./",
+    "folder": "Download",
+    "name": "create_time nickname desc",
+    "time": "%Y-%m-%d %H.%M.%S",
+    "split": "-",
+    "music": false,
+    "save": "",
+    "cookie": null,
+    "dynamic": false,
+    "original": false,
+    "proxies": "",
+    "log": false,
+    "download": true,
+    "max_size": 0,
+    "chunk": 524288,
+    "retry": 10,
+    "pages": 0,
+    "thread": false
+}
