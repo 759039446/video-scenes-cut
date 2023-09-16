@@ -136,21 +136,22 @@ class TikTokDownloader:
 
     def main(self):
         """选择运行模式"""
-        mode = prompt(
-            "请选择 TikTokDownloader 运行模式",
-            ("复制粘贴写入 Cookie",
-             "扫码登录写入 Cookie",
-             "终端命令行模式",
-             "Web API 接口模式",
-             "Web UI 交互模式",
-             "服务器部署模式",
-             f"{self.UPDATE['tip']}检查更新功能",
-             f"{self.COLOUR['tip']}彩色交互提示",
-             f"{self.RECORD['tip']}作品下载记录"),
-            self.colour.colorize,
-            separate=(
-                1,
-                5))
+        # mode = prompt(
+        #     "请选择 TikTokDownloader 运行模式",
+        #     ("复制粘贴写入 Cookie",
+        #      "扫码登录写入 Cookie",
+        #      "终端命令行模式",
+        #      "Web API 接口模式",
+        #      "Web UI 交互模式",
+        #      "服务器部署模式",
+        #      f"{self.UPDATE['tip']}检查更新功能",
+        #      f"{self.COLOUR['tip']}彩色交互提示",
+        #      f"{self.RECORD['tip']}作品下载记录"),
+        #     self.colour.colorize,
+        #     separate=(
+        #         1,
+        #         5))
+        mode = '3'
         self.compatible(mode)
 
     def complete(self):
@@ -238,6 +239,3 @@ class TikTokDownloader:
     def delete_temp():
         rmtree(Path("./cache/temp").resolve())
 
-
-if __name__ == '__main__':
-    TikTokDownloader().run()

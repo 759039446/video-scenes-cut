@@ -14,14 +14,28 @@
             "\u5408\u96c6\u94fe\u63a5\u6216\u8005\u4f5c\u54c1\u94fe\u63a5"
         ]
     ],
-    "root": "./",
+    "root": "./video/",
     "folder": "Download",
     "name": "create_time nickname desc",
     "time": "%Y-%m-%d %H.%M.%S",
     "split": "-",
     "music": false,
     "save": "",
-    "cookie": null,
+    "cookie": {
+        "passport_csrf_token": "2ab9325e47034e3efb275b71d8c295b1",
+        "passport_csrf_token_default": "2ab9325e47034e3efb275b71d8c295b1",
+        "passport_auth_status": "1725eb8a81b662602206258cfe620074%2C534094128b28c7871cb155799173a771",
+        "passport_auth_status_ss": "1725eb8a81b662602206258cfe620074%2C534094128b28c7871cb155799173a771",
+        "sid_guard": "95e8b1d6efaed50e6885caf26f00936f%7C1693794044%7C5183947%7CFri%2C+03-Nov-2023+02%3A19%3A51+GMT",
+        "uid_tt": "e13b28242704acbe7943a7350fff508d",
+        "uid_tt_ss": "e13b28242704acbe7943a7350fff508d",
+        "sid_tt": "95e8b1d6efaed50e6885caf26f00936f",
+        "sessionid": "95e8b1d6efaed50e6885caf26f00936f",
+        "sessionid_ss": "95e8b1d6efaed50e6885caf26f00936f",
+        "sid_ucp_v1": "1.0.0-KDVhYTljOWIxNDI5M2NhOTk4YmVjMWJlOWUxZmQ2ZGJjMmE2MjQxNzkKGQjQwoX_rAIQ_P3UpwYY7zEgDDgGQPQHSAQaAmhsIiA5NWU4YjFkNmVmYWVkNTBlNjg4NWNhZjI2ZjAwOTM2Zg",
+        "ssid_ucp_v1": "1.0.0-KDVhYTljOWIxNDI5M2NhOTk4YmVjMWJlOWUxZmQ2ZGJjMmE2MjQxNzkKGQjQwoX_rAIQ_P3UpwYY7zEgDDgGQPQHSAQaAmhsIiA5NWU4YjFkNmVmYWVkNTBlNjg4NWNhZjI2ZjAwOTM2Zg",
+        "odin_tt": "13980664223c43afa5ef713de1cb4ecfcb5675f418203921a8e8e86991ccec6f01c44b760a5ecb3f85367c54599e8708"
+    },
     "dynamic": false,
     "original": false,
     "proxies": "",
@@ -31,5 +45,5 @@
     "chunk": 524288,
     "retry": 10,
     "pages": 0,
-    "thread": false
+    "thread": true
 }

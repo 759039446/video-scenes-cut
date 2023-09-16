@@ -165,12 +165,14 @@ class TikTok:
             name=self.nickname)
         save, root, params = self.record.run(
             self._data["root"], format_=self._data["save"])
-        select = prompt("请选择账号链接来源", ("使用 accounts 参数内的账号链接(推荐)",
-                                               "手动输入待采集的账号链接"), self.colour.colorize)
+        # select = prompt("请选择账号链接来源", ("使用 accounts 参数内的账号链接(推荐)",
+        #                                        "手动输入待采集的账号链接"), self.colour.colorize)
+        select = "2"
         if select == "1":
             self.user_works_batch(save, root, params)
         elif select == "2":
             self.user_works_solo(save, root, params)
+            self.quit = True
         elif select.upper() == "Q":
             self.quit = True
         self.logger.info("已退出批量下载账号作品模式")
@@ -190,28 +192,26 @@ class TikTok:
             # break  # 调试使用
 
     def user_works_solo(self, save, root, params):
-        while True:
-            url = input("请输入账号链接: ")
-            if not url:
+        url = input("请输入账号链接: ")
+        if not url:
+            self.quit = True
+        elif url in ("Q", "q",):
+            self.quit = True
+        links = self.request.run_alone(url, user=True)
+        for i in links:
+            if not self.get_account_works(
+                    0,
+                    "",
+                    i,
+                    "post",
+                    "",
+                    "",
+                    save,
+                    root,
+                    params):
+                if failed():
+                    continue
                 break
-            elif url in ("Q", "q",):
-                self.quit = True
-                break
-            links = self.request.run_alone(url, user=True)
-            for i in links:
-                if not self.get_account_works(
-                        0,
-                        "",
-                        i,
-                        "post",
-                        "",
-                        "",
-                        save,
-                        root,
-                        params):
-                    if failed():
-                        continue
-                    break
 
     def get_account_works(
             self,
@@ -629,18 +629,19 @@ class TikTok:
     def run(self):
         self.configuration()
         while not self.quit:
-            select = prompt(
-                "请选择下载模式",
-                ("批量下载账号作品",
-                 "单独下载链接作品",
-                 "获取直播推流地址",
-                 "采集作品评论数据",
-                 "批量下载合集作品",
-                 "批量采集账号数据",
-                 "采集搜索结果数据",
-                 "采集抖音热榜数据",
-                 "批量下载收藏作品"),
-                self.colour.colorize)
+            # select = prompt(
+            #     "请选择下载模式",
+            #     ("批量下载账号作品",
+            #      "单独下载链接作品",
+            #      "获取直播推流地址",
+            #      "采集作品评论数据",
+            #      "批量下载合集作品",
+            #      "批量采集账号数据",
+            #      "采集搜索结果数据",
+            #      "采集抖音热榜数据",
+            #      "批量下载收藏作品"),
+            #     self.colour.colorize)
+            select = '1'
             if select in ("Q", "q", "",):
                 self.quit = True
             elif select == "1":
